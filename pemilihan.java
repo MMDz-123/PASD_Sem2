@@ -13,7 +13,7 @@ public static int rata(int[]val){
     val1 = (int) (val[0]*(0.2));
     val2 = (int) (val[1]*(0.2));
     val3 = (int) (val[2]*(0.3));
-    val4 = (int) (val[3]*(0.4));
+    val4 = (int) (val[3]*(0.3));
     tot  = (int) (val1+val2+val3+val4);
     return tot;
 }
