@@ -64,11 +64,12 @@ public class array {
               ((int)nil[2][7]*(int)nil[3][7]);
         SKS = (int)nil[2][0]+(int)nil[2][1]+(int)nil[2][2]+(int)nil[2][3]+(int)nil[2][4]+(int)nil[2][5]+(int)nil[2][6]+(int)nil[2][7];
         IPS = nSet/SKS;
-
+        System.out.println("Matkul\t\tnilai\t\tnilai huruf\t\tSKS\tnilai sementara");
         for (int i = 0; i < MK[1].length; i++) {
-            System.out.println("Nilai Matkul "+ MK[0][i]+ ": \t\t"+(int)nil[0][i]+ "\t"+ MK[1][i]+ "\t" + (int)nil[2][i] + "\t" + nil[3][i]);
+            System.out.println(MK[0][i]+ ": \t\t"+(int)nil[0][i]+ "\t\t"+ MK[1][i]+ "\t" + (int)nil[2][i] + "\t" + nil[3][i]);
         }
         System.out.println("=========================");
         System.out.println("IP= "+IPS);
+        scanner.close();
     }
 }

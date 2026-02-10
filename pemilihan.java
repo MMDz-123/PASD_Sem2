@@ -102,6 +102,6 @@ public static void main(String[] args) {
         System.out.println("Anda dinyatakan tidak lulus *emot tengkorak");
         System.out.println("============================");
     }
-    
+    scanner.close();
     }
 }

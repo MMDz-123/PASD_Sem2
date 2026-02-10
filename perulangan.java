@@ -32,6 +32,6 @@ public class perulangan {
                 continue;
                 }
     }
-    
+    scanner.close();
 }
 }
