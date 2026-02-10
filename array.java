@@ -64,9 +64,9 @@ public class array {
               ((int)nil[2][7]*(int)nil[3][7]);
         SKS = (int)nil[2][0]+(int)nil[2][1]+(int)nil[2][2]+(int)nil[2][3]+(int)nil[2][4]+(int)nil[2][5]+(int)nil[2][6]+(int)nil[2][7];
         IPS = nSet/SKS;
-        System.out.println("Matkul\t\tnilai\t\tnilai huruf\t\tSKS\tnilai sementara");
+        System.out.printf("%-20s %-10s %-15s %-5s %-15s%n", "Matkul", "nilai", "SKS", "nilai huruf", "SKS", "Nilai Sementara");
         for (int i = 0; i < MK[1].length; i++) {
-            System.out.println(MK[0][i]+ ": \t\t"+(int)nil[0][i]+ "\t\t"+ MK[1][i]+ "\t" + (int)nil[2][i] + "\t" + nil[3][i]);
+            System.out.printf("%-20s %-10d %-15s %-5d %-15.2f%n", MK[0][i], (int)nil[0][i], MK[1][i], (int)nil[2][i], nil[3][i]);
         }
         System.out.println("=========================");
         System.out.println("IP= "+IPS);

@@ -73,6 +73,7 @@ public static void main(String[] args) {
             System.out.println("=================");
             System.out.println("nilai harus kurang dari atau sama dengan 100");
             System.out.println("=================");
+            continue;
         }
 
         else{
@@ -85,7 +86,7 @@ public static void main(String[] args) {
     tot= rata(nil);
     System.out.println();
     nHrf(tot);
-    System.out.println();
+    System.out.println("Nilai rata-rata: ");
     System.out.println(tot);
 
     if (nHrf(tot).equalsIgnoreCase("A")||
@@ -94,12 +95,12 @@ public static void main(String[] args) {
         nHrf(tot).equalsIgnoreCase("C+")||
         nHrf(tot).equalsIgnoreCase("C")) {
         System.out.println("============================");
-        System.out.println("Selamat anda lulus *emot api");
+        System.out.println("Selamat anda lulus");
         System.out.println("============================");
     }
     else{
         System.out.println("============================");
-        System.out.println("Anda dinyatakan tidak lulus *emot tengkorak");
+        System.out.println("Anda dinyatakan tidak lulus");
         System.out.println("============================");
     }
     scanner.close();
