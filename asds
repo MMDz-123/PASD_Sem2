@@ -28,9 +28,31 @@ public class mahasiswaDemo2 {
 
             scanner.nextLine();
         }
-        mahasiswa2.ctkInf(arayofMahasiswa, 3);
+        mahasiswa2.ctkInf(arayofMahasiswa[], 3);
 
         scanner.close();
 
     }
 }
+ini kode di class mahasiswaDemo2
+
+package Praktikum3;
+
+public class mahasiswa2 {
+    public String nim;
+    public String nama;
+    public String kelas;
+    public float ipk;
+    
+    public static void ctkInf(mahasiswa2[] arayofMahasiswa ,int pjg){
+      for (int i = 0; i < pjg; i++) {
+            System.out.println("NIM:     " + arayofMahasiswa[i].nim);
+            System.out.println("Nama:    " + arayofMahasiswa[i].nama);
+            System.out.println("Kelas:   " + arayofMahasiswa[i].kelas);
+            System.out.println("IPK:     " + arayofMahasiswa[i].ipk);
+            System.out.println("===========================================");
+      }  
+    }
+}
+
+dan ini class mahasiswa2, terdapat error di mahasiswaDemo2 di bagian mahasiswa2.ctkInf(arayofMahasiswa[], 3); apakah ada yang salah
