@@ -20,13 +20,17 @@ public class mataKuliah2 {
         String dummy;
             System.out.print("Kode:         ");
             kode = scanner.nextLine();
+            scanner.nextLine();
             System.out.print("Nama:         ");
             nama = scanner.nextLine();
+            scanner.nextLine();
             System.out.print("SKS:          ");
             dummy = scanner.nextLine();
+            scanner.nextLine();
             sks = Integer.parseInt(dummy);
             System.out.print("Jumlah Jam:   ");
             dummy = scanner.nextLine();
+            scanner.nextLine();
             jmlJam = Integer.parseInt(dummy);
     }
 
