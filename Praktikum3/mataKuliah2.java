@@ -1,15 +1,27 @@
 package Praktikum3;
 
+import java.util.Scanner;
+
 public class mataKuliah2 {
     public String kode;
     public String nama;
     public int sks;
     public int jmlJam;
 
-    public mataKuliah2(String kode, String nama, int sks, int jmlJam){
-        this.kode = kode;
-        this.nama = nama;
-        this.sks = sks;
-        this.jmlJam = jmlJam;
+
+    public void tambahData(Scanner scanner){
+        String dummy;
+            System.out.print("Kode:         ");
+            kode = scanner.nextLine();
+            System.out.print("Nama:         ");
+            nama = scanner.nextLine();
+            System.out.print("SKS:          ");
+            dummy = scanner.nextLine();
+            sks = Integer.parseInt(dummy);
+            System.out.print("Jumlah Jam:   ");
+            dummy = scanner.nextLine();
+            jmlJam = Integer.parseInt(dummy);
     }
+
+    
 }
