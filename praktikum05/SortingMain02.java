@@ -10,6 +10,16 @@ public class SortingMain02 {
         dataurut1.bubbleSort();
         System.out.println("data sudah diurutkan dengan BUBBLE SORT (ASCEND)");
         dataurut1.tmpl();
+        
+
+        int b[] = {30, 20, 2, 8, 14};
+        Sorting02 dataurut2 = new Sorting02(b, b.length);
+
+        System.out.println("data awal 2");
+        dataurut2.tmpl();
+        dataurut2.SelectionSort();
+        System.out.println("data sudah diurutkan dengan BUBBLE SORT (ASCEND)");
+        dataurut2.tmpl();
     }
 
 }
