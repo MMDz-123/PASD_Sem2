@@ -17,7 +17,7 @@ public class SortingMain02 {
         System.out.println("data awal 2");
         dataurut2.tmpl();
         dataurut2.SelectionSort();
-        System.out.println("data sudah diurutkan dengan BUBBLE SORT (ASCEND)");
+        System.out.println("data sudah diurutkan dengan SELECTION SORT (ASCEND)");
         dataurut2.tmpl();
 
         int c[] = {40, 10, 4, 9, 3};
@@ -26,7 +26,7 @@ public class SortingMain02 {
         System.out.println("data awal 2");
         dataurut3.tmpl();
         dataurut3.SelectionSort();
-        System.out.println("data sudah diurutkan dengan BUBBLE SORT (ASCEND)");
+        System.out.println("data sudah diurutkan dengan INSERTION SORT (ASCEND)");
         dataurut3.tmpl();        
     }
 

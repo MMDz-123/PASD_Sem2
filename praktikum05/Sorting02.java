@@ -11,6 +11,12 @@ public class Sorting02 {
             data[i] = Data[i];
         }
     }
+    void tmpl(){
+        for (int i = 0; i < jumData; i++) {
+            System.out.print(data[i] + " ");
+        }
+        System.out.println();
+    }
 
     void bubbleSort(){
         int temp = 0;
@@ -20,18 +26,11 @@ public class Sorting02 {
                     temp = data[j];
                     data[j] = data[j-1];
                     data[j-1] = temp;
-
                 }
             }
         }
     }
 
-    void tmpl(){
-        for (int i = 0; i < jumData; i++) {
-            System.out.print(data[i] + " ");
-        }
-        System.out.println();
-    }
 
     void SelectionSort(){
         for (int i = 0; i < jumData; i++) {
