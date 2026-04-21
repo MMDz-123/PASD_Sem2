@@ -16,6 +16,7 @@ public class mahasiswaDemo2 {
             System.out.println("2. Menilai tugas");
             System.out.println("3. Melihat tugas teratass");
             System.out.println("4. Lihat daftar tugasa");
+            System.out.println("5. Lihat tugas terbawah");
             System.out.print("pilihan:");
             menu = scanner.nextInt();
             scanner.nextLine();
@@ -44,22 +45,29 @@ public class mahasiswaDemo2 {
                     }
                     break;
                     
-                    case 3:
-                        mahasiswa2 lihat = stack.peek();
-                        if (lihat != null) {
-                            System.out.println("Tugas terakhir dikumpulkan oleh: " + lihat.nama);
-                        }
-                        break;
+                case 3:
+                    mahasiswa2 Lihat = stack.peek();
+                    if (Lihat != null) {
+                        System.out.println("Tugas terakhir dikumpulkan oleh: " + Lihat.nama);
+                    }
+                    break;
                         
-                        case 4:
-                            System.out.println("Daftar tugas");
-                            System.out.println("Nama\tNIM\tkels");
-                            stack.print();
-                            break;
+                case 4:
+                    System.out.println("Daftar tugas");
+                    System.out.println("Nama\tNIM\tkels");
+                    stack.print();
+                    break;
+
+                case 5:
+                    mahasiswa2 tahiL = stack.peekBelow();
+                    if (tahiL != null) {
+                        System.out.println("Tugas pertama: " + tahiL.nama);
+                    }
+
                             
-                            default:
-                                System.out.println("Pilihan tidak valid");
-                            }
-                        }while(menu >=1 && menu <=4);
-                    }     
+                default:
+                System.out.println("Pilihan tidak valid");
+                }
+            }while(menu >=1 && menu <=6);
+    }     
 }
