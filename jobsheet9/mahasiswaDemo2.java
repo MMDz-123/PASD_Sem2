@@ -63,6 +63,11 @@ public class mahasiswaDemo2 {
                     if (tahiL != null) {
                         System.out.println("Tugas pertama: " + tahiL.nama);
                     }
+                    break;
+
+                case 6:
+                    System.out.println("Jumlah tugas sudah kumpul: " + stack.jml());
+                    break;
 
                             
                 default:

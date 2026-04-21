@@ -74,4 +74,9 @@ public class StackTugasMahasiswa2 {
         }
     }
 
+    public int jml(){
+        int jumlah = top+1;
+        return jumlah;
+    }
+
 }
