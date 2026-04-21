@@ -25,7 +25,7 @@ public class peminjamanMain {
         pjmList[3] = new peminjaman(mhsLst[2], bkList[3], 6);
         pjmList[4] = new peminjaman(mhsLst[0], bkList[1], 4);
 
-        while (menu >=1) {
+        
             System.out.println("menu:");
             menu = scanner.nextInt();
 
@@ -51,7 +51,7 @@ public class peminjamanMain {
                 case 4:
                     for (int i = 0; i < pjmList.length - 1; i++) {
                         for (int j = 1; j < pjmList.length - i; j++) {
-                            if (pjmList[j-1].denda < pjmList[j].denda) {
+                            if (pjmList[j-1].denda > pjmList[j].denda) {
                                 peminjaman temp = pjmList[j];
                                 pjmList[j] = pjmList[j-1];
                                 pjmList[j-1] = temp;
@@ -61,16 +61,17 @@ public class peminjamanMain {
                     System.out.println("Data Peminjaman (Urut Berdasarkan Denda Tertinggi):");
                     System.out.println("===================================================");
                     for (peminjaman p : pjmList) {
-                        p.tampil(); // Memanggil method tampil dari class peminjaman
+                        p.tampil();
                         System.out.println("-----------------------------------");
                     }
                     
                     break;
                 case 5:
+                    //urut
                     System.out.print("Key: ");
                     String key = scanner.nextLine();
-                    for (int i = 0; i < pjmList.length-1; i++) {
-                        for (int j = 1; j < pjmList.length-i; j++) {
+                    for (int i = 0; i > pjmList.length-1; i++) {
+                        for (int j = 1; j > pjmList.length-i; j++) {
                             if (pjmList[j-1].mhs.nim.compareTo(pjmList[j].mhs.nim)>0) {
                                 peminjaman temp = pjmList[j];
                                 pjmList[j] = pjmList[j-1];
@@ -78,7 +79,8 @@ public class peminjamanMain {
                             }
                         }
                     }
-                    int posisi = binarySearchNIM(pjmList, key, 0, pjmList.length - 1);
+                    //cari
+                    int posisi = binsrcNIM(pjmList, key, 0, pjmList.length - 1);
                     if (posisi != -1) {
                         pjmList[posisi].tampil(); 
                     } else {
@@ -90,10 +92,11 @@ public class peminjamanMain {
                 default:
                     break;
             }
+            scanner.close();
         }
-    }
+    
 
-    static int binarySearchNIM(peminjaman[] list, String cariNIM, int left, int right) {
+    static int binsrcNIM(peminjaman[] list, String cariNIM, int left, int right) {
     if (right >= left) {
         int mid = left + (right - left) / 2;
         int hasilBanding = cariNIM.compareTo(list[mid].mhs.nim);
@@ -101,10 +104,11 @@ public class peminjamanMain {
             return mid;
         }
         if (hasilBanding < 0) {
-            return binarySearchNIM(list, cariNIM, left, mid - 1);
+            return binsrcNIM(list, cariNIM, left, mid - 1);
         }
-        return binarySearchNIM(list, cariNIM, mid + 1, right);
+        return binsrcNIM(list, cariNIM, mid + 1, right);
     }
     return -1;
     }
+    
 }
