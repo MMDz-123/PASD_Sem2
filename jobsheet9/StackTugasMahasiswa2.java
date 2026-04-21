@@ -79,4 +79,18 @@ public class StackTugasMahasiswa2 {
         return jumlah;
     }
 
+    public String konversiDecToBin(int nilai){
+        stKonv stack = new stKonv();
+        while (nilai != 0) {
+            int sisa = nilai %2;
+            stack.push(sisa);
+            nilai = nilai/2;
+        }
+        String bin = new String();
+        while (!stack.isEmpty()) {
+            bin += stack.pop();
+        }
+        return bin;
+    }
+
 }

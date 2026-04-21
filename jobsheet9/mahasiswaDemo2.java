@@ -42,6 +42,8 @@ public class mahasiswaDemo2 {
                         int nilai = scanner.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("nilai tugas %s dinilai %d\n", dinilai.nama, nilai);
+                        String bin = stack.konversiDecToBin(nilai);
+                        System.out.println("Nilai dalam biner: " + bin);
                     }
                     break;
                     
