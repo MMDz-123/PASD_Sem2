@@ -1,4 +1,4 @@
-package Praktikum3;
+package antrianLayanan.java;
 
 import java.util.Scanner;
 
