@@ -13,6 +13,7 @@ public class queue {
 
     public boolean isEmpty(){
         if(size==0){
+            System.exit(0);
             return true;
         }
         else{
@@ -22,6 +23,7 @@ public class queue {
 
         public boolean isFull(){
         if(size==max){
+            System.exit(0);
             return true;
         }
         else{

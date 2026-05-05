@@ -93,4 +93,15 @@ public class AntrianLayanan {
     public int getJmlAntrian() {
         return size;
     }
+
+    public void lihatBelakang(){
+        if(!isEmpty()){
+            System.out.println("mahasiswa terdepan: ");
+            System.out.println("NIM - Nama - Prodi - Kelas");
+            data[rear].tampilDat();
+        }
+        else{
+            System.out.println("Kosong");
+        }
+    }
 }  
