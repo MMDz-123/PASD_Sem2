@@ -1,4 +1,4 @@
-package pertemuan12;
+
 
 public class mahasiswa02 {
     String nama, nim, kelas;

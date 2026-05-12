@@ -1,4 +1,4 @@
-package pertemuan12;
+
 
 public class SingleLinkedList02 {
     node02 head;

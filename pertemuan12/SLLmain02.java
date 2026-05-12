@@ -1,35 +1,66 @@
-package pertemuan12;
+
+
+import java.util.Scanner;
 
 public class SLLmain02 {
     public static void main(String[] args) {
         SingleLinkedList02 sll = new SingleLinkedList02();
+        Scanner scanner = new Scanner(System.in);
+        int menu;
 
-        mahasiswa02[] mhs = new mahasiswa02[4] ;
-        mhs[0] = new mahasiswa02("Tung Sahur", "2G", "190", 3.20);
-        mhs[1] = new mahasiswa02("Tralalero", "2K", "191", 3.20);
-        mhs[2] = new mahasiswa02("Dindindun", "2j", "192", 3.20);
-        mhs[3] = new mahasiswa02("Assasino", "2R", "193", 3.20);
+        do {
+            System.out.println("---------------------------------");
+            System.out.println("MENU MAHASISWA (LINKED LIST)");
+            System.out.println("---------------------------------");
+            System.out.println("1. Tambah Depan (addFirst)");
+            System.out.println("2. Tambah Belakang (addLast)");
+            System.out.println("3. Sisip Berdasarkan Indeks (insertAt)");
+            System.out.println("4. Hapus Depan (remFirst)");
+            System.out.println("5. Hapus Belakang (remLast)");
+            System.out.println("6. Cetak List (print)");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih Menu: ");
+            menu = scanner.nextInt();
+            scanner.nextLine();
 
-        sll.print();
-        sll.addFrst(mhs[0]);
-        sll.print();
-        sll.addFrst(mhs[1]);
-        sll.print();
-        sll.addLast(mhs[3]);
-        sll.print();
-        sll.insertAt(2, mhs[2]);
-        sll.print();
+            switch (menu) {
+                case 1:
+                case 2:
+                case 3:
+                    System.out.print("Masukkan Nama: ");
+                    String nama = scanner.nextLine();
+                    System.out.print("Masukkan NIM : ");
+                    String nim = scanner.nextLine();
+                    System.out.print("Masukkan Kelas: ");
+                    String kelas = scanner.nextLine();
+                    System.out.print("Masukkan IPK : ");
+                    double ipk = scanner.nextDouble();
+                    mahasiswa02 mhs = new mahasiswa02(nama, kelas, nim, ipk);
 
-        // Praktikum 2
-        System.out.println("data indeks 1: ");
-        sll.getData(1);
+                    if (menu == 1) {
+                        sll.addFrst(mhs);
+                    } else if (menu == 2) {
+                        sll.addLast(mhs);
+                    } else {
+                        System.out.print("Masukkan Indeks: ");
+                        int idx = scanner.nextInt();
+                        sll.insertAt(idx, mhs);
+                    }
+                    break;
 
-        System.out.println("data mahasiswa an 'Tung Sahur' berada di indeks: " + sll.idxof("Tung Sahur"));
+                case 4:
+                    sll.remfirst();
+                    break;
 
-        sll.remfirst();
-        sll.remLast();
-        sll.print();
-        sll.remAt(0);
-        sll.print();
+                case 5:
+                    sll.remLast();
+                    break;
+
+                case 6:
+                    sll.print();
+                    break;
+            }
+        } while (menu != 0);
+
     }
 }
