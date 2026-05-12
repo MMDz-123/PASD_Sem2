@@ -44,7 +44,12 @@ public class DLLmain02 {
                     list.remLast();
                     break;
                 case 6:
-                    list.print();
+                    if(!(list.isEmpty())){
+                        list.print();
+                    }
+                    else{
+                        System.out.println("List kosong");
+                    }
                     break;
                 case 0:
                     System.out.println("Program selesai");

@@ -74,6 +74,19 @@ public class DoubleLinkedList02 {
         }
     }
 
+    public void printRev(){
+        if(isEmpty()){
+            System.out.println("List kosong");
+        }
+        else{
+            node02 current = tail;
+        while (current != null) {
+            current.data.tmpl();
+            current = current.prev;
+            }
+        }
+    }
+
     public void remfirst(){
         if (isEmpty()) {
             System.out.println("LinkedList kosong");
