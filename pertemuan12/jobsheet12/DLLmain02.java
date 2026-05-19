@@ -10,12 +10,10 @@ public class DLLmain02 {
 
         do{
             System.out.println("\n=====MENU DLL=====");
-            System.out.println("1.Tambah di awal");
-            System.out.println("2.Tambah di akhir");
-            System.out.println("3.Sisipkan di tengah (stetlah NIM)");
-            System.out.println("4.Hapus di awal");
-            System.out.println("5.Hapus di akhir");
-            System.out.println("6.Tampilkan data");
+            System.out.println("1.Tambah Antrian");
+            System.out.println("2.Cetak Antrian");
+            System.out.println("3.Hapus antrian dan pesan");
+            System.out.println("4.Laporan Pesanan");
             System.out.println("0.Keluar");
             System.out.print("1.Menu: ");
             menus = scanner.nextInt();
@@ -40,17 +38,7 @@ public class DLLmain02 {
                 case 4:
                     list.remfirst();
                     break;
-                case 5:
-                    list.remLast();
-                    break;
-                case 6:
-                    if(!(list.isEmpty())){
-                        list.print();
-                    }
-                    else{
-                        System.out.println("List kosong");
-                    }
-                    break;
+
                 case 0:
                     System.out.println("Program selesai");
                     break;

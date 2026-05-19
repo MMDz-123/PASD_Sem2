@@ -4,6 +4,7 @@ public class Sorting02 {
     int[] data;
     int jumData;
     
+    
     Sorting02 (int Data[], int jmlDat){
         jumData = jmlDat;
         data = new int[jmlDat];

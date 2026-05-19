@@ -27,7 +27,7 @@ public class DoubleLinkedList02 {
     }
 
     public void addLast(mahasiswa02 dat){
-        node02 newNode02 = new node02(dat);
+        node newNode02 = new node(dat);
         if(isEmpty()){
             head = tail = newNode02;
         }
@@ -40,34 +40,33 @@ public class DoubleLinkedList02 {
 
     public void insertAfter(String keyNim, mahasiswa02 dat){
         node02 current = head;
-        while (current != null && !current.data.nim.equals(keyNim)) {
             current = current.next;
+            if (current == null) {
+                System.out.println("Data dengan NIM " + keyNim + " tidak ditemukan");
+                return;
+            }
+            node newNode = new node(dat);
+            
+            if (current ==tail) {
+                newNode.prev = current;
+                current.next = newNode;
+                tail = newNode;
+            }
+            else{
+                newNode.prev = current;
+                current.next = current.next;
+                current.next.prev = newNode;
+                current.next = newNode;
+            }
+            System.out.println("Data berhasil disimpan");
         }
-        if (current == null) {
-            System.out.println("Data dengan NIM " + keyNim + " tidak ditemukan");
-            return;
-        }
-        node02 newNode = new node02(dat);
-
-        if (current ==tail) {
-            newNode.prev = current;
-            current.next = newNode;
-            tail = newNode;
-        }
-        else{
-            newNode.prev = current;
-            current.next = current.next;
-            current.next.prev = newNode;
-            current.next = newNode;
-        }
-        System.out.println("Data berhasil disimpan");
     }
-
+        
     public void print(){
         if(isEmpty()){
             System.out.println("List kosong");
         }
-        node02 current = head;
+        node current = head;
         while (current != null) {
             current.data.tmpl();
             current = current.next;
@@ -79,7 +78,7 @@ public class DoubleLinkedList02 {
             System.out.println("List kosong");
         }
         else{
-            node02 current = tail;
+            node current = tail;
         while (current != null) {
             current.data.tmpl();
             current = current.prev;
@@ -107,7 +106,7 @@ public class DoubleLinkedList02 {
             head = tail = null;
         }
         else{
-            node02 tmp = head;
+            node tmp = head;
             while (tmp.next !=tail) {
                 tmp = tmp.next;
             }

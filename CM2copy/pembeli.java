@@ -1,4 +1,4 @@
-package CM2;
+package CM2copy;
 
 public class pembeli {
     String nama, noHp;

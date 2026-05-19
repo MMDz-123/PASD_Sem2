@@ -1,4 +1,5 @@
-package CM2;
+package CM2copy;
+
 
 public class dll {
     node head, tail;
@@ -93,4 +94,33 @@ public class dll {
             }
         }
     }
-}
+    
+        public void prio(int idx, pembeli dat){
+        node current = head;
+        int i=0;
+        do{ 
+            current = current.next;
+            if (current == null && idx == i) {
+                return;
+            }
+            node newNode = new node(dat);
+            
+            if (current ==tail) {
+                newNode.prev = current;
+                current.next = newNode;
+                tail = newNode;
+                break;
+            }
+            else{
+                newNode.prev = current;
+                current.next = current.next;
+                current.next.prev = newNode;
+                current.next = newNode;
+            }
+            System.out.println("Data berhasil disimpan");
+            i++;
+        }while (idx !=0);
+        }
+    }
+
+
